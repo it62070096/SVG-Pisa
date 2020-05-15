@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pisa</title>
+    <style>
+        body{
+            background-color:hsl(200, 60%, 80%);
+        }
+    </style>
+</head>
+<body>
+    <svg viewbox="-50 100 1200 800">
+        <!--road-->>
+        <path d="M645 327 l-155 195 
+                            l-362 -187 
+                            l-100 43 
+                            l750 460
+                            l200 -440
+                            l-580 -175
+                            l0 140z"  fill="hsl(0, 0%, 30%)"/>
+
+        <!--ground-->>
+        <path d="M730 350 l-155 225
+                 l260 140
+                 l132 -293" fill="url(#ground)"/>
+
+        <!--footpath-->>
+        <path d="M42 372 l744 450
+                 l-7 19
+                 l-757 -462z" fill="hsl(40, 100%, 79%)"/>
+        
+        <path d="M112 340 l380 208
+                 l14 -19
+                 l-370 -198" fill="hsl(40, 100%, 79%)"/>
+
+        <path d="M505 530 l165 -205
+                 l-17 -5
+                 l-175 210" fill="hsl(40, 100%, 79%)"/>
+
+        <path d="M653 320 l-150 -50
+                l0 30
+                l143 30z" fill="hsl(40, 100%, 79%)"/>
+
+        <path d="M23 378 L50 450 L750 910 L780 839" fill="hsl(30, 100%, 79%)"/>
+  
+    <path d="M750 910 L979 397 L780 832.5"  fill="hsl(0, 0%, 10%)"/>
+
+        <svg id="tower" viewbox="100 350 1200,800">
+          <g transform="scale(1.5 1.5)
+                        rotate(5 0 0)">
+            <!-- base-->
+          <path fill="url(#white)" d="M604 480 Q550 510 604 550 Q645 570 690 550 Q740 510 685 480"/>
+          <path fill="url(#gray)" d="M602 488 Q570 510 602 540 Q645 560 690 540 Q720 510 688 490"/>
+          
+          <!-- tower-->
+          <path d="M600 500 l18 -200 Q660 335 700 300 l-15 210 Q645 550 600 500" fill="url(#white)"/>
+          <path fill="url(#gray)" d="M618 300 Q670 250 700 300 Q660 335 618 300"/>
+          <path fill="url(#gray)" d="M634 270 Q662 250 691 272 Q662 290 634 270"/>
+          <path d="M630 300 l4 -30 Q662 290 690 272 l-4 28 Q660 320 630 300" fill="url(#white)"/>
+          
+          <!--เส้นแบ่งชั้น-->
+          <path fill="url(#gray)" d="M605 462 Q655 500 690 460 l0 -5 Q655 495 603 455z"/>
+          <path fill="url(#gray)" d="M608 407 Q655 435 692 410 l0 -5 Q655 430 608 402"/>
+          <path fill="url(#gray)" d="M613 355 Q655 380 696 355 l0 -5 Q655 375 613 349z"/>
+          
+          <!--window first floor-->
+          <path fill="hsl(0, 0%, 90%)" d="M605 505 l2 -25 Q615 470 620 487 l-2.5 30z"/>
+          <path fill="hsl(0, 0%, 85%)" d="M628 525 l2 -25 Q640 480 646 500 l-2 27 Q637 530 628 523"/>
+          <path fill="hsl(0, 0%, 70%)" d="M657 527 l1 -25 Q665 480 672 495 l-1 26"/>
+          <path fill="hsl(0, 0%, 55%)" d="M679 515 l2 -26 Q685 478 687 490 l-2 20z"/>
+          
+          <!--window second floor-->
+          <path fill="hsl(0, 0%, 90%)" d="M608 460 l3 -25 Q620 425 625 443 l-3 26"/>
+          <path fill="hsl(0,0%,85%)" d="M632 472 l2 -25 Q642 435 650 450 l-2.5 26"/>
+          <path fill="hsl(0, 0%, 70%)" d="M660 475 l1 -25 Q667 435 674 445 l-1 25"/>
+          <path  fill="hsl(0, 0%, 55%)" d="M682 463 l2 -25 Q690 430 691 440 l-2.5 20"/>
+          
+          <!--window third floor-->
+          <path fill="hsl(0, 0%, 90%)" d="M613 408 l2.5 -25 Q623 375 630 386 l-2 26"/>
+          <path fill="hsl(0,0%,85%)" d="M636 415 l2.5 -25 Q648 380 653 395 l-2.5 25"/>
+          <path fill="hsl(0,0%,70%)" d="M663 417 l2 -25 Q673 382 678 390 l-2 25"/>
+          <path fill="hsl(0,0%,55%)" d="M687 409 l1.5 -25 Q693 374 694 384 l-1.5 25"/>
+          
+          <!-- window fourth floor-->
+          <path  fill="hsl(0,0%,90%)" d="M619 353 l2.7 -25 Q629 318 635 332 l-2.7 27"/>
+          <path fill="hsl(0,0%,85%)" d="M641 361 l2.5 -25 Q653 322 659 340 l-2.5 25"/>
+          <path fill="hsl(0,0%,70%)" d="M668 363 l2.5 -25 Q676 320 683 332 l-2.5 26"/>
+          <path fill="hsl(0,0%,55%)" d="M690 356 l2.5 -25 Q695 322 698 331 l-2 23"/>
+          
+          <!--roof-->
+          <path fill="hsl(0,0%,85%)" d="M638 305 l2.5 -20 Q650 280 655 292 l-2.6 18"/>
+          <path fill="hsl(0,0%,59%)" d="M673 309 l1.5 -18 Q681 278 688 285 l-2 18"/>
+          <path fill="url(#gray)" d="M634 270 l2.5 -18 Q655 270 692 255 l-1 16 Q685 280 686 262 Q665 275 640 263 l-1 10"/>
+          <path fill="hsl(0,0%,80%)" d="M660 280 l1 -12 Q663 270 666 266 l-0.8 14"/>
+          <path fill="hsl(0,0%,80%)" d="M637 253 Q665 240 692  255 l-6 3 Q660 245 640 258"/>
+          <path fill="hsl(0,0%,80%)" d="M662 262 l0.7 -12 l5 0 l-0.9 12"/>
+          
+          <!--ground color-->
+          <defs>
+            <linearGradient id="ground">
+              <stop offset="20%" stop-color="hsl(118, 50%, 54%)"/>
+              <stop offset="100%" stop-color="hsl(118, 92%, 25%)"/>
+            </linearGradient>
+          </defs>
+          
+          <!--base color-->
+          <defs>
+            <linearGradient id="gray">
+              <stop offset="40%" stop-color="hsl(118, 0%, 80%)"/>
+              <stop offset="100%" stop-color="hsl(118, 0%, 43%)"/>
+            </linearGradient>
+          </defs>
+          <defs>
+            <linearGradient id="white">
+              <stop offset="50%" stop-color="hsl(0, 0%, 100%)"/>
+              <stop offset="100%" stop-color="hsl(0, 0%, 59%)"/>
+            </linearGradient>
+          </defs> 
+        </svg>
+          
+        <svg id="house" viewbox="-100 -100 1200 800">
+          <g transform="scale(0.5 0.5)
+                        rotate(5 0 0)">
+          
+            <defs>
+                        <linearGradient id="qwe">
+                          <stop offset="40%" stop-color="hsl(190, 3%, 85%)"/>
+                          <stop offset="100%" stop-color="hsl(190, 8%, 49%)"/>
+                        </linearGradient>
+         </defs>
+          <!---พื้นหน้าตึก --->
+          
+          <path d="M257 377 L96 461 L854 770 L1127 360 L1022 336" fill="url(#gray)"/>
+          
+          <!--- Lบ้าน --->
+          <path  d="M256 378 L470 456 L468 434 L463 432 L509 400 L507 384 L241 304 Z" fill="url(#qwe)"/>
+          
+          <path d="M240 304 L506 383 L506 380 L245 301" fill="url(#qwe)"/>
+          
+          <path   d="M506 381 L502 351 L513 339 L234 262 L246 302" fill="url(#qwe)"/>
+          
+          <path  d="M233 262 L514 340 L628 270 L291 189" fill="url(#qwe)"/>
+          
+          <path  d="M628 270 L291 189 L284 142 L651 224 L653 254 Z" fill="url(#qwe)"/>
+          
+          <path   d="M284 142 L651 224 L643 193 L643 185 L646 180 L646 161 L647 157 L319 92 Z" fill="url(#qwe)"/>
+          
+          <!--- CENTERบ้าน --->
+          
+          <circle  cx="729" cy="27" r="10" fill="url(#qwe)"/>
+          
+          <path   d="M721 40 Q729 42 737 40 L735 34 Q728 35 723 34 Z" fill="url(#qwe)"/>
+          
+          <path  d="M662 118 L686 78 L721 40 Q729 42 737 40 L771 74 L798 113 L818 156 L807 174 L774 185 L736 190 L689 187 L656 175 L647 160 Z" fill="url(#qwe)"/>
+          
+          <path  d="M818 156 L807 174 L774 185 L736 190 L689 187 L656 175 L647 160 L647 158 L646 183 L658 202 L688 214 L735 218 L778 211 L792 206 L807 188 L815 189 L819 183 L817 156" fill="url(#qwe)"/>
+          
+          <path   d="M815 189 L827 192 L819 183" fill="url(#qwe)"/>
+          
+          <path   d="M792 205 L797 207 L790 212 L718 220 L656 207 L643 184 L647 180 L646 183 L658 202 L688 214 L735 218 L778 211 L792 206 L807 188 L815 189 L819 183 L817 156" fill="url(#qwe)"/>
+          
+          <path  d="M656 207 L643 184 L644 195 L652 223 L653 254 L660 252 Z" fill="url(#qwe)"/>
+          
+          <path  d="M660 252 L656 207 L718 220 L720 265 L688 243 Z" fill="url(#qwe)"/>
+          
+          <path  d="M718 220 L721 313 L751 298 L750 246 L747 245 L792 219 L791 212" fill="url(#qwe)"/>
+          
+          <path  d="M792 219 L791 212 L798 208 Z" fill="url(#qwe)"/>
+          
+          <path d="M654 254 L660 252 L688 243 L530 343 L496 350 Z" fill="url(#qwe)"/>
+          
+          <path  d="M720 265 L688 243 L530 343 L567 370 L720 266" fill="url(#qwe)"/>
+          
+          <path  d="M720 266 L721 314 L705 342 L575 440 L568 369 Z" fill="url(#qwe)"/>
+          
+          <path  d="M496 350 L567 370 L530 343 Z" fill="url(#qwe)"/>
+          
+          <path  d="M496 350 L567 370 L575 441 L511 420 Z" fill="url(#qwe)"/>
+          
+          <path  d="M511 420 L463 430 L508 399 Z" fill="url(#qwe)"/>
+          
+          <path  d="M705 341 L730 401 L631 486 L574 441 Z" fill="url(#qwe)"/>
+          
+          <path  d="M730 401 L731 449 L634 536 L630 485 Z" fill="url(#qwe)"/>
+          
+          <path  d="M730 450 L634 536 L585 518 L581 521 L636 540 L733 454 Z" fill="url(#qwe)"/>
+          
+          <path  d="M630 486 L634 536 L584 519 L580 469 Z" fill="url(#qwe)"/>
+          
+          <path  d="M733 454 L736 546 L644 640 L635 539 Z" fill="url(#qwe)"/>
+          
+          <path  d="M635 539 L644 640 L593 620 L583 522 Z" fill="url(#qwe)"/>
+          
+          <path  d="M593 620 L583 522 Q539 527 514 503 L524 601 Q553 625 593 620 Z" fill="url(#qwe)"/>
+          
+          <path  d="M514 503 L513 498 L467 481 L481 576 L524 592 Z" fill="url(#qwe)"/>
+          
+          <path  d="M513 498 L467 481 L473 479 L512 493 Z" fill="url(#qwe)"/>
+          
+          <path  d="M463 431 L628 486 L576 441 L509 419 Z" fill="url(#qwe)"/>
+          
+          <path  d="M473 479 L512 493 L510 445 L468 433 Z" fill="url(#qwe)"/>
+          
+          <path  d="M585 518 Q539 527 514 503 L511 471 L509 446 L580 470 Z" fill="url(#qwe)"/>
+          
+          <path  d="M542 442 L583 470 Q539 476 506 445 Z" fill="url(#qwe)"/>
+          
+          <!--- Rบ้าน --->
+          
+          
+          
+          <path  d="M900 276 L896 334 L750 300 L750 244 Z" fill="url(#qwe)"/>
+          
+          <path  d="M900 276 L957 228 L931 212 Z" fill="url(#qwe)"/>
+          
+          <path d="M900 276 L896 334 L928 271 L952 277 L953 231 Z" fill="url(#qwe)"/>
+          
+          <path  d="M896 335 L926 271 L957 277 L1002 298 L1016 308 L1020 322 Q953 351 891 340" fill="url(#qwe)"/>
+          
+          <path  d="M891 340 L850 436 L730 403 L705 342 L721 314 L751 299 L896 334" fill="url(#qwe)"/>
+          
+          <path  d="M850 434 L850 484 L731 450 L730 402 Z" fill="url(#qwe)"/>
+          
+          <path  d="M850 484 L892 440 L892 339 L851 434 Z" fill="url(#qwe)"/>
+          
+          <path  d="M892 339 L892 440 Q955 450 1014 418 L1020 322 Q955 350 895 341" fill="url(#qwe)"/>
+          
+          <path  d="M892 438 L889 534 Q955 543 1008 504 L1015 417 Q955 450 892 438" fill="url(#qwe)"/>
+          
+          <path  d="M892 444 L889 534 L848 584 L850 488 Z" fill="url(#qwe)"/>
+        
+          <path  d="M848 584 L850 488 L732 454 L736 547 Z" fill="url(#qwe)"/>
+          
+          <path  d="M828 192 L900 145 L873 127 L818 161 L817 180 Z" fill="url(#qwe)"/>
+          
+          <path  d="M873 127 L818 161 L816 155 L849 135 Z" fill="url(#qwe)"/>
+          
+          <path  d="M828 192 L900 145 L897 205 Z" fill="url(#qwe)"/>
+          
+          <!-----window----->
+          <path  d="M298 178 L294 156 L299 158.5 L303 180 L298 178" fill="grey"/>
+          
+          <path  d="M329 164 L335 166 L338 187.5 L332 186 L329 164" fill="grey"/>
+          
+          <path d="M366 172 L372 174 L375 196 L369 194 L366 172" fill="grey"/>
+          
+          <path  d="M404 180 L410.7 181 L413 204.5 L407 203 L404 180" fill="grey"/>
+          
+          <path  d="M443 189 L450 190 L451 214 L444.7 212 L443 189" fill="grey"/>
+          
+          <path  d="M483 198 L490 200 L491 223 L484 222 L483 198" fill="grey"/>
+          
+          <path  d="M525 208 L532 209 L533 233.5 L526 232 L525 208" fill="grey"/>
+          
+          <path  d="M569 218 L577 220 L577 244 L570 242 L569 218" fill="grey"/>
+          
+          <path  d="M614 228 L622 230 L622 255 L614 253 L614 228" fill="grey"/>
+          
+          <------------------------------>
+            
+            <path  d="M587 376 L592 372 L594 400 L589 404 L587 376" fill="grey"/>
+            
+            <path  d="M623 350 L628 347 L630 373 L625 378 L623 350" fill="grey"/>
+            
+            <path  d="M657 326 L662 323 L664 350 L659 353 L657 326" fill="grey"/>
+          
+            <path  d="M687 305 L693 302 L695 329 L689 332 L687 305" fill="grey"/>
+            
+            <------------------------------>
+              
+              <path  d="M647 476 L652 472 L653 498 L648 502 L647 476" fill="grey"/>
+              
+              <path  d="M668 459 L673 455 L674 480 L668 484 L668 459" fill="grey"/>
+              
+              <path  d="M687 442 L692 439 L693 464 L688 467 L687 442" fill="grey"/>
+              
+              <path  d="M705 427 L710 423 L711 447 L706 450 L705 427" fill="grey"/>
+              
+              <--------------------------->
+                
+                <path  d="M765 491 L775 494 L775 526 L765 523 L765 491" fill="grey"/>
+                
+                <path  d="M818 507 L828 511 L828 544 L818 541 L818 507" fill="grey"/>
+                
+                <--------------------------->
+                  
+                  <path  d="M766 415 L773 417 L773 442 L766 440 L766 415" fill="grey"/>
+                  
+                  <path  d="M793 424 L800 425 L800 450 L793 448 L793 424" fill="grey"/>
+                  
+                  <path  d="M821 431 L828 433 L828 457 L821 456 L821 431" fill="grey"/>
+                  
+                  <--------------------------->
+                    
+                    <path  d="M774 262 L781 263 L781 289 L774 288 L774 262" fill="grey"/>
+                    
+                    <path  d="M821 273 L829 274 L829 300 L821 299 L821 273" fill="grey"/>
+                    
+                    <path  d="M870 284 L878 285 L878 311 L870 310 L870 284" fill="grey"/>
+                    
+                    <--------------------------->
+                      
+                      <path  d="M662 237 Q686 200 714 248 L662 237" fill="grey"/>
+                      
+                      <path  d="M725 248 Q755 200 777 240 L725 248" fill="grey"/>
+                      
+                      <---หลังคาขวาบน--->
+                        
+                      <path  d="M807 188 L931 212 L900 276 L746 243 L791 219 L797 209 L791 205 L807 188" fill="url(#qwe)"/>
+                        
+                    <--------------------------->
+                      
+                      <path  d="M867 181 L871 180 L871 199 L867 199 L867 181" fill="grey"/>
+                      
+                      <path  d="M886 168 L890 166 L890 187 L886 189 L886 168" fill="grey"/>
+                      
+                      <--------------------------->
+                        
+                        <path  d="M257 332 L263 333 L269 363 L263 361 L257 332" fill="grey"/>
+                        
+                        <path  d="M292 342 L298 343 L303 373.5 L297 371 L292 342" fill="grey"/>
+                        
+                        <path   d="M327 353 L333 354 L339 385 L333 383 L327 353" fill="grey"/>
+                        
+                        <path  d="M363 365 L370 366 L376 396 L369 394 L363 365" fill="grey"/>
+                        
+                        <path  d="M401 377 L409 378 L413 409 L405 407 L401 377" fill="grey"/>
+                        
+                        <path  d="M441 389 L449 391 L451 421 L443 420 L441 389" fill="grey"/>
+                        
+                        <path  d="M482 416 L482 402 L490 402 L490 412 L482 416" fill="grey"/>
+                        
+                        <--------------------------->
+                          
+                          <path  d="M245 266 L250 267 L255 289 L251 289 L245 267" fill="grey"/>
+                          
+                          <path  d="M263 271 L267 272 L271 293 L267 293 L263 271" fill="grey"/>
+                          
+                          <path  d="M280 276 L285 277 L289 299 L285 299 L280 276" fill="grey"/>
+                          
+                          <path  d="M299 281 L303 282 L307 304 L303 304 L299 281" fill="grey"/>
+                          
+                          <path  d="M316 286 L322 287 L326 310 L321 309 L316 286" fill="grey"/>
+                          
+                          <path  d="M335 292 L341 292 L344 314 L339 314 L335 292" fill="grey"/>
+                          
+                          <path  d="M354 297 L359 298 L363 320 L358 320 L354 297" fill="grey"/>
+                          
+                          <path  d="M373 302 L379 303 L382 326 L377 326 L373 302" fill="grey"/>
+                          
+                          <path  d="M393 308 L398 309 L402 332 L396 331 L393 309" fill="grey"/>
+                          
+                          <path  d="M413 314 L418 315 L422 338 L417 338 L413 314" fill="grey"/>
+                          
+                          <path  d="M433 319 L439 320 L442 343 L437 343 L434 320" fill="grey"/>
+                          
+                          <path  d="M454 325 L460 327 L463 350 L458 350 L454 325" fill="grey"/>
+                          
+                          <path  d="M476 331 L481 333 L484 356 L479 356 L476 331" fill="grey"/>
+                          
+                          <path  d="M497 338 L502 339 L503 345 L498 348 L497 338" fill="grey"/>
+        </svg>
+        <!--tree-->>
+        <path d="M152.5 340 l0 20 -2 -2 l0 -20z" fill="hsl(38, 85%, 33%)"/>
+        <path d="M152.5 340 l0 20 2 -2 l0 -20z"  fill="hsl(38, 85%, 33%)"/>
+        <path d="M152.5 340 l0 -20 l10 -5 l0 17z" fill="url(#ground)"/>
+        <path d="M152.5 340 l0 -20 l-9 -4 l0 17z" fill="url(#ground)" stroke="url(#ground)"/>
+        <path d="M152.5 320 l10 -5 l-10 -5 l-10 5" stroke="url(#ground)" fill="url(#ground)"/>
+
+        <path d="M200.5 360 l0 20 -2 -2 l0 -20z" fill="hsl(38, 85%, 33%)"/>
+        <path d="M200.5 360 l0 20 2 -2 l0 -20z"  fill="hsl(38, 85%, 33%)"/>
+        <path d="M200.5 360 l0 -20 l10 -5 l0 17z" fill="url(#ground)"/>
+        <path d="M200.5 360 l0 -20 l-9 -4 l0 17z" fill="url(#ground)" stroke="url(#ground)"/>
+        <path d="M200.5 340 l10 -5 l-10 -5 l-10 5" stroke="url(#ground)" fill="url(#ground)"/>
+
+        <path d="M250.5 385 l0 20 -2 -2 l0 -20z" fill="hsl(38, 85%, 33%)"/>
+        <path d="M250.5 385 l0 20 2 -2 l0 -20z"  fill="hsl(38, 85%, 33%)"/>
+        <path d="M250.5 385 l0 -20 l10 -5 l0 17z" fill="url(#ground)"/>
+        <path d="M250.5 385 l0 -20 l-9 -4 l0 17z" fill="url(#ground)" stroke="url(#ground)"/>
+        <path d="M250.5 365 l10 -5 l-10 -5 l-10 5" stroke="url(#ground)" fill="url(#ground)"/>
+
+        <path d="M300.5 410 l0 20 -2 -2 l0 -20z" fill="hsl(38, 85%, 33%)"/>
+        <path d="M300.5 410 l0 20 2 -2 l0 -20z"  fill="hsl(38, 85%, 33%)"/>
+        <path d="M300.5 410 l0 -20 l10 -5 l0 17z" fill="url(#ground)"/>
+        <path d="M300.5 410 l0 -20 l-9 -4 l0 17z" fill="url(#ground)" stroke="url(#ground)"/>
+        <path d="M300.5 390 l10 -5 l-10 -5 l-10 5" stroke="url(#ground)" fill="url(#ground)"/>
+
+        <path d="M350.5 440 l0 20 -2 -2 l0 -20z" fill="hsl(38, 85%, 33%)"/>
+        <path d="M350.5 440 l0 20 2 -2 l0 -20z"  fill="hsl(38, 85%, 33%)"/>
+        <path d="M350.5 440 l0 -20 l10 -5 l0 17z" fill="url(#ground)"/>
+        <path d="M350.5 440 l0 -20 l-9 -4 l0 17z" fill="url(#ground)" stroke="url(#ground)"/>
+        <path d="M350.5 420 l10 -5 l-10 -5 l-10 5" stroke="url(#ground)" fill="url(#ground)"/>
+
+        <path d="M400.5 470 l0 20 -2 -2 l0 -20z" fill="hsl(38, 85%, 33%)"/>
+        <path d="M400.5 470 l0 20 2 -2 l0 -20z"  fill="hsl(38, 85%, 33%)"/>
+        <path d="M400.5 470 l0 -20 l10 -5 l0 17z" fill="url(#ground)"/>
+        <path d="M400.5 470 l0 -20 l-9 -4 l0 17z" fill="url(#ground)" stroke="url(#ground)"/>
+        <path d="M400.5 450 l10 -5 l-10 -5 l-10 5" stroke="url(#ground)" fill="url(#ground)"/>
+
+        <path d="M450.5 490 l0 20 -2 -2 l0 -20z" fill="hsl(38, 85%, 33%)"/>
+        <path d="M450.5 490 l0 20 2 -2 l0 -20z"  fill="hsl(38, 85%, 33%)"/>
+        <path d="M450.5 490 l0 -20 l10 -5 l0 17z" fill="url(#ground)"/>
+        <path d="M450.5 490 l0 -20 l-9 -4 l0 17z" fill="url(#ground)" stroke="url(#ground)"/>
+        <path d="M450.5 470 l10 -5 l-10 -5 l-10 5" stroke="url(#ground)" fill="url(#ground)"/>
+
+        <path d="M60 375 l0 20 -2 -2 l0 -20z" fill="hsl(38, 85%, 33%)"/>
+        <path d="M60 375 l0 20 2 -2 l0 -20z"  fill="hsl(38, 85%, 33%)"/>
+        <path d="M60 375 l0 -20 l10 -5 l0 17z" fill="url(#ground)"/>
+        <path d="M60 375 l0 -20 l-9 -4 l0 17z" fill="url(#ground)" stroke="url(#ground)"/>
+        <path d="M60 355 l10 -5 l-10 -5 l-10 5" stroke="url(#ground)" fill="url(#ground)"/>
+
+        <path d="M110 410 l0 20 -2 -2 l0 -20z" fill="hsl(38, 85%, 33%)"/>
+        <path d="M110 410 l0 20 2 -2 l0 -20z"  fill="hsl(38, 85%, 33%)"/>
+        <path d="M110 410 l0 -20 l10 -5 l0 17z" fill="url(#ground)"/>
+        <path d="M110 410 l0 -20 l-9 -4 l0 17z" fill="url(#ground)" stroke="url(#ground)"/>
+        <path d="M110 390 l10 -5 l-10 -5 l-10 5" stroke="url(#ground)" fill="url(#ground)"/>
+
+        <path d="M170 445 l0 20 -2 -2 l0 -20z" fill="hsl(38, 85%, 33%)"/>
+        <path d="M170 445 l0 20 2 -2 l0 -20z"  fill="hsl(38, 85%, 33%)"/>
+        <path d="M170 445 l0 -20 l10 -5 l0 17z" fill="url(#ground)"/>
+        <path d="M170 445 l0 -20 l-9 -4 l0 17z" fill="url(#ground)" stroke="url(#ground)"/>
+        <path d="M170 425 l10 -5 l-10 -5 l-10 5" stroke="url(#ground)" fill="url(#ground)"/>
+
+        <path d="M230 480 l0 20 -2 -2 l0 -20z" fill="hsl(38, 85%, 33%)"/>
+        <path d="M230 480 l0 20 2 -2 l0 -20z"  fill="hsl(38, 85%, 33%)"/>
+        <path d="M230 480 l0 -20 l10 -5 l0 17z" fill="url(#ground)"/>
+        <path d="M230 480 l0 -20 l-9 -4 l0 17z" fill="url(#ground)" stroke="url(#ground)"/>
+        <path d="M230 460 l10 -5 l-10 -5 l-10 5" stroke="url(#ground)" fill="url(#ground)"/>
+
+        <path d="M290 510 l0 20 -2 -2 l0 -20z" fill="hsl(38, 85%, 33%)"/>
+        <path d="M290 510 l0 20 2 -2 l0 -20z"  fill="hsl(38, 85%, 33%)"/>
+        <path d="M290 510 l0 -20 l10 -5 l0 17z" fill="url(#ground)"/>
+        <path d="M290 510 l0 -20 l-9 -4 l0 17z" fill="url(#ground)" stroke="url(#ground)"/>
+        <path d="M290 490 l10 -5 l-10 -5 l-10 5" stroke="url(#ground)" fill="url(#ground)"/>
+
+        <path d="M350 550 l0 20 -2 -2 l0 -20z" fill="hsl(38, 85%, 33%)"/>
+        <path d="M350 550 l0 20 2 -2 l0 -20z"  fill="hsl(38, 85%, 33%)"/>
+        <path d="M350 550 l0 -20 l10 -5 l0 17z" fill="url(#ground)"/>
+        <path d="M350 550 l0 -20 l-9 -4 l0 17z" fill="url(#ground)" stroke="url(#ground)"/>
+        <path d="M350 530 l10 -5 l-10 -5 l-10 5" stroke="url(#ground)" fill="url(#ground)"/>
+
+        <path d="M410 590 l0 20 -2 -2 l0 -20z" fill="hsl(38, 85%, 33%)"/>
+        <path d="M410 590 l0 20 2 -2 l0 -20z"  fill="hsl(38, 85%, 33%)"/>
+        <path d="M410 590 l0 -20 l10 -5 l0 17z" fill="url(#ground)"/>
+        <path d="M410 590 l0 -20 l-9 -4 l0 17z" fill="url(#ground)" stroke="url(#ground)"/>
+        <path d="M410 570 l10 -5 l-10 -5 l-10 5" stroke="url(#ground)" fill="url(#ground)"/>
+
+        <svg viewbox="0 0 100 100" width="300" height="200" x="500" y="100">
+          <ellipse cx="40" cy="30" rx="40" ry="20" fill="white">
+            <animate attributeName="ry" values="20;25;20" dur="2s" repeatCount="indefinite" />
+            <animate attributeName="cx" values="45;55;45" dur="1.5s" repeatCount="indefinite" />
+          </ellipse>
+          <ellipse cx="10" cy="20" rx="20" ry="10" fill="white">
+            <animate attributeName="cx" values="10;20;10" dur="1.5s" repeatCount="indefinite" />
+            <animate attributeName="ry" values="5;10;5" dur="1.5s" repeatCount="indefinite" />
+          </ellipse>
+          <ellipse cx="70" cy="40" rx="20" ry="10" fill="white">
+                    <animate attributeName="cx" values="80;90;80" dur="1.5s" repeatCount="indefinite" />
+                    <animate attributeName="ry" values="5;10;5" dur="1.8s" repeatCount="indefinite" />
+          </ellipse>
+      </svg>
+        </svg>
+</body>
+</html>
